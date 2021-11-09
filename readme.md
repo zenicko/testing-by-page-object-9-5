@@ -1,5 +1,5 @@
 # I'm a readme file and will tell you about this project!
-This project used a new-old pattern "Page object".
+This project used a new-old pattern "Page object". *Continue the second lesson.*
 
 ## About home tasks
 ___
@@ -16,9 +16,9 @@ ___
 
 Step 1. Create files build.gradle, .gitignore, readme.md and a structure of directories.
 
-Step 2.
+Step 2. Make refactoring class StudentRegistrationForm from lesson 2. Put the file into /docs. Create a new class TestBase.
 
-Step 3.
+Step 3. 
 
 Step 4.
 
