@@ -22,9 +22,7 @@ Step 3. Make `class RegistrationPage` is used the pattern of Page Object.
 Create `class CalendarComponents` is used Page Component.
 Rrefactoring `class StudentRegistrationForm` and make `class StudentRegistrationWithObjectPageForm`.
 
-Step 4.
-
-Step 5.
+Step 4. Apply Java Faker. Generate test data by Java Faker. 
 
 
 ## What's new?
@@ -41,7 +39,12 @@ ___
       2. [en](https://guides.github.com/features/mastering-markdown/)
       3. [Git, en](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
    2. The examples of selenide' tests.
-      1. [autotests-cloud/selenide-web-ios-android-tests](https://github.com/autotests-cloud/selenide-web-ios-android-tests)   
+      1. [autotests-cloud/selenide-web-ios-android-tests](https://github.com/autotests-cloud/selenide-web-ios-android-tests)
+   3. About Java Faker
+      1. https://dius.github.io/java-faker/
+      2. https://www.baeldung.com/java-faker
+      3. https://github.com/DiUS/java-faker
+      4. https://mvnrepository.com/artifact/com.github.javafaker/javafaker
       
 ### -1. Miscellaneous
    1. MD. 
@@ -62,4 +65,5 @@ ___
       
 ## Checking
 ___
+
 
