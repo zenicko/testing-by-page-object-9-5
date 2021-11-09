@@ -16,9 +16,11 @@ ___
 
 Step 1. Create files build.gradle, .gitignore, readme.md and a structure of directories.
 
-Step 2. Make refactoring class StudentRegistrationForm from lesson 2. Put the file into /docs. Create a new class TestBase.
+Step 2. Make refactoring `class StudentRegistrationForm` from lesson 2. Put the file into /docs. Create a new `class TestBase`.
 
-Step 3. 
+Step 3. Make `class RegistrationPage` is used the pattern of Page Object. 
+Create `class CalendarComponents` is used Page Component.
+Rrefactoring `class StudentRegistrationForm` and make `class StudentRegistrationWithObjectPageForm`.
 
 Step 4.
 
@@ -38,6 +40,8 @@ ___
       1. [ru](https://gist.github.com/Jekins/2bf2d0638163f1294637#Links)
       2. [en](https://guides.github.com/features/mastering-markdown/)
       3. [Git, en](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+   2. The examples of selenide' tests.
+      1. [autotests-cloud/selenide-web-ios-android-tests](https://github.com/autotests-cloud/selenide-web-ios-android-tests)   
       
 ### -1. Miscellaneous
    1. MD. 
@@ -51,6 +55,10 @@ ___
       2. Heading
       
          `#<blank>text`
+      3. The types of the Pattern Page Object.
+         1. The Steps
+         2. The Script
+         3. The Chain / DSL
       
 ## Checking
 ___

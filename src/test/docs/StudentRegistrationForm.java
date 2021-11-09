@@ -34,7 +34,7 @@ public class StudentRegistrationForm {
 
         $(".react-datepicker__month-select").selectOption("June");
         $(".react-datepicker__year-select").selectOption("1999");
-        $(".react-datepicker__month").$(byText("12")).click();
+        $(.react-datepicker__month:not(.react-datepicker__day--outside-month)).$(byText("12")).click();
 
         $("#subjectsInput").setValue("Hindi");
         $("#react-select-2-option-0").click();
@@ -64,6 +64,19 @@ public class StudentRegistrationForm {
                 text("Male"), text("1234567890"), text("12 June,1999"), text("Hindi"), text("Sports"),
                 text("img/photo_2020-11-17_15-25-27.jpg"), text("RU, Moscow, st. Baba Galya, 1"),
                 text("NCR"), text("Delhi"));
+
+        $(".table-responsive").shouldHave(text("Student Name")).parent().shouldHave(text("Ivan" + " " + "Ivanov"));
+        $(".table-responsive").shouldHave(text("Student Email")).parent().shouldHave(text("Ivanov@a.ru"));
+        $(".table-responsive").shouldHave(text("Gender")).parent().shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("Mobile")).parent().shouldHave(text("1234567890"));
+
+        $(".table-responsive").shouldHave(text("Date of Birth")).parent().shouldHave(text("12 June,1999"));
+        $(".table-responsive").shouldHave(text("Subjects")).parent().shouldHave(text("Hindi"));
+
+        $(".table-responsive").shouldHave(text("Hobbies")).parent().shouldHave(text("Sports"));
+        $(".table-responsive").shouldHave(text("Picture")).parent().shouldHave(text("photo_2020-11-17_15-25-27.jpg"));
+        $(".table-responsive").shouldHave(text("Address")).parent().shouldHave(text("RU, Moscow, st. Baba Galya, 1"));
+        $(".table-responsive").shouldHave(text("State and City")).parent().shouldHave(text("NCR" + " " + "Delhi"));
 
     }
 }
