@@ -2,16 +2,19 @@ package ru.zenicko.tests;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
+
+import java.util.Random;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class StudentRegistrationWithObjectPageJavaFakerForm extends TestBase {
-
+    public String sex[] = {"Male", "Female", "Other"};
     private Faker faker = new Faker();
 
     private String firstName = faker.name().firstName();
     private String lastName = faker.name().lastName();
     private String userEmail = faker.internet().emailAddress();
-    private String sex = StudentRegistrationWithObjectPageJavaFakerForm.getSex(3, faker);
+    private String randomSex = StudentRegistrationWithObjectPageJavaFakerForm.getSex(sex);
     private String streetAddress = faker.address().streetAddress();
     private String useNumber = faker.phoneNumber().subscriberNumber(10);
 
@@ -28,13 +31,19 @@ public class StudentRegistrationWithObjectPageJavaFakerForm extends TestBase {
         }
     }
 
+    private static String getSex(String[] sex){
+        int randomIntFromZeroToNine = new Random().nextInt(sex.length);
+        return sex[randomIntFromZeroToNine];
+    }
+
+
     @Test
     void fillStudentRegistrationForm() {
         registrationPage.openPage();
         registrationPage.setFistName(firstName);
         registrationPage.setLastName(lastName);
         registrationPage.setUserEmail(userEmail);
-        registrationPage.setGender(sex);
+        registrationPage.setGender(randomSex);
         registrationPage.setUserNumber(useNumber);
         registrationPage.calendarComponents.setBirthDay("12", "June", "1999");
         registrationPage.setSubject("Hindi");
@@ -51,7 +60,7 @@ public class StudentRegistrationWithObjectPageJavaFakerForm extends TestBase {
         registrationPage
                 .checkResultsValue("Student Name", firstName + " " + lastName)
                 .checkResultsValue("Student Email", userEmail)
-                .checkResultsValue("Gender", sex)
+                .checkResultsValue("Gender", randomSex)
                 .checkResultsValue("Date of Birth", "12 June,1999")
                 .checkResultsValue("Mobile", useNumber)
                 .checkResultsValue("Subjects", "Hindi")

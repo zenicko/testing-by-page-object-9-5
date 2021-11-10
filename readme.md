@@ -22,12 +22,22 @@ Step 3. Make `class RegistrationPage` is used the pattern of Page Object.
 Create `class CalendarComponents` is used Page Component.
 Rrefactoring `class StudentRegistrationForm` and make `class StudentRegistrationWithObjectPageForm`.
 
-Step 4. Apply Java Faker. Generate test data by Java Faker. 
+Step 4. Apply Java Faker. Generate test data by Java Faker.
+
+Step 5. Change the algorithm of a random selection of a sex. The method `getSex` is overrided.
 
 
 ## What's new?
 ___
 ### 1. Java
+   1. Faker
+      1. Demografic.sex `/src/main/resources/en/demographic.yml`
+         ```
+         en:
+         faker:
+         demographic:
+         sex: ["Male", "Female"]
+         ```
 ### 2. Gradle
 ### 3. Selenide
 ### 4. Git
