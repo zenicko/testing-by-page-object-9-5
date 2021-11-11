@@ -17,9 +17,17 @@ compileTestJava {
 }
 
 dependencies {
+    implementation 'com.fasterxml:jackson-xml-databind:0.6.2'
+
     //Selenide
     testImplementation('com.codeborne:selenide:5.25.0-selenium-4.0.0')
     testRuntimeOnly('org.slf4j:slf4j-simple:1.7.30')
+
+    //SoftAssert
+    testImplementation('org.assertj:assertj-core:3.19.0');
+
+    //JSON
+    testImplementation('com.fasterxml.jackson.core:jackson-databind:2.12.3');
 
     // Java Faker
     testImplementation('com.github.javafaker:javafaker:1.0.2')

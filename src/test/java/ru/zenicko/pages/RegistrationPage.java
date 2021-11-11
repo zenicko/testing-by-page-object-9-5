@@ -1,10 +1,7 @@
 package ru.zenicko.pages;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import ru.zenicko.pages.components.CalendarComponents;
-
-import java.net.HttpCookie;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -26,7 +23,7 @@ public class RegistrationPage {
             hobbiesWrapperCheckBox = $("#hobbiesWrapper"),
             uploadPictureInput = $("#uploadPicture"),
             currentAddressTextArea = $("#currentAddress"),
-            getOutTextArea = $("#currentAddress-label"),
+            getOutCurrentAddressTextArea = $("#currentAddress-label"),
             activeStateSelect = $("#state").$(".css-tlfecz-indicatorContainer"),
             stateSelect = $("#react-select-3-input"),
             activeCitySelect = $("#city").$(".css-tlfecz-indicatorContainer"),
@@ -91,7 +88,7 @@ public class RegistrationPage {
 
     public RegistrationPage setCurrentAddress(String currentAddress) {
         currentAddressTextArea.setValue(currentAddress);
-        getOutTextArea.click();
+        getOutCurrentAddressTextArea.click();
         return this;
     }
 
@@ -117,8 +114,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage checkResultsValue(String key, String value) {
-        resultTable.shouldHave(text(key)).parent().shouldHave(text(value));
+    public RegistrationPage checkResultsValue(String key, Object value) {
+        resultTable.shouldHave(text(key)).parent().shouldHave(text(value.toString()));
 
         return this;
     }
